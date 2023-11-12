@@ -1,5 +1,5 @@
 # WORDLE GAME CLONE
-## Video Demo:  <URL HERE>
+## Video Demo: [youtube link](https://youtu.be/FD-NmM2AAWs)
 ## Description:
 Well the title is pretty self explanatory, my 'CS50 FINAL PROJECT' is a Wordle clone implemented using HTML, CSS, JS and Flask.
 ### how to run
