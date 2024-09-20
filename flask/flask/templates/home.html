@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+        <!-- Use url_for to generate the correct URL for static files -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+        
+        <title> Wordle </title>
+
+    </head>
+
+    <body>
+
+        <h1>Wordle</h1>
+        <div id="settings-container">
+            <div id="toggle-container" class="hidden">
+                <input type="checkbox" id="mode-toggle" class="toggle-checkbox" onchange="toggleMode()">
+                <label for="mode-toggle" class="toggle-label"></label>
+            </div>
+        </div>
+        <div id="board"></div>
+        <br>
+        <h1 id="answer"></h1>
+        <div id="tryAgainPopup" class="popup">
+            <p id="resultMessage"></p>
+            <button onclick="tryAgain()">Reload to play again</button>
+        </div>
+
+    </body>
+</html>

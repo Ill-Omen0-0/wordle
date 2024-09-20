@@ -1,0 +1,234 @@
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: white;
+}
+
+.dark-mode {
+    background-color: black;
+}
+
+#title {
+    font-size:36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1{
+    color:black;
+}
+
+.dark-mode h1{
+    color:white;
+}
+
+#board{
+    width:350px;
+    height:420px;
+    margin: 0 auto;
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile{
+    /* box */
+    border: 2px solid gray;
+    width: 60px;
+    height: 60px;
+    margin: 2.5px;
+
+    /* text */
+    color: black;
+    font-size:36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;/* center text inside */
+}
+
+.dark-mode .tile{
+    /* box */
+    border: 2px solid gray;
+    width: 60px;
+    height: 60px;
+    margin: 2.5px;
+
+    /* text */
+    color: white;
+    font-size:36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;/* center text inside */
+}
+
+.correct{
+    background-color: rgb(111, 212, 111);
+    color:white;
+    border-color: white;
+}
+
+.present{
+    background-color: rgb(223, 223, 86);
+    color: white;
+    border-color: white;
+
+}
+
+.absent{
+    background-color: grey;
+    color :white;
+    border-color: white;
+}
+
+.keyboard-row{
+    width: 400px;
+    margin: 5 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.key-tile{
+    /* box */
+    border: 1px solid gray;
+    width: 36px;
+    height: 40px;
+    margin: 1px;
+
+    /* text */
+    color: black;
+    font-size:20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;/* center text inside */
+}
+
+.dark-mode .key-tile{
+    /* box */
+    border: 1px solid gray;
+    width: 36px;
+    height: 40px;
+    margin: 1px;
+
+    /* text */
+    color: white;
+    font-size:20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;/* center text inside */
+}
+
+.enter-key-tile{
+    /* box */
+    border: 1px solid gray;
+    width: 70px;
+    height: 40px;
+    margin: 1px;
+
+    /* text */
+    color: black;
+    font-size:20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;/* center text inside */
+}
+
+.dark-mode .enter-key-tile{
+    /* box */
+    border: 1px solid gray;
+    width: 70px;
+    height: 40px;
+    margin: 1px;
+
+    /* text */
+    color: white;
+    font-size:20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;/* center text inside */
+}
+
+/* keyboard tiles */
+.key-tile,
+.enter-key-tile{
+    cursor: pointer;
+    user-select: none;
+    justify-content: center;
+}
+.keyboard-row {
+    cursor: pointer;
+    user-select: none;
+    justify-content: center;
+    margin: auto; /* disable text selection */
+}
+
+/* try again pop up */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(96, 96, 96);
+    padding: 20px;
+    text-align: center;
+    color:white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup button {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* settings bar */
+#settings-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+#toggle-container {
+    position: relative;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: white;
+}
